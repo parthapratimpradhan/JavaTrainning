@@ -1,22 +1,89 @@
 package com.learn.java;
 
-import com.learn.java.d20.AdvanceCalculator;
-import com.learn.java.d20.BasicCalculator;
-import com.learn.java.d20.MathCalculator;
-import com.learn.java.d20.MheOfficeCalculator;
-import com.learn.java.d20.MyCollegeCalculator;
-import com.learn.java.d20.MyOfficeCalculator;
-import com.learn.java.d20.TaxCalculator;
-import com.learn.java.d20.TriconOfficeCalculator;
-import com.learn.java.d21.Day21;
-import com.learn.java.d21.Day21Ch;
-import com.learn.java.d21.InterfaceVAriables;
+import com.learn.java.d26.School;
+import com.learn.java.d26.SchoolGround;
 
 public class BasicMainPage {
 	
 	public int x = 100;
 
+
+	
+//	
+//	private static AdvanceCalculator getMeOfcCalculator() {
+//		return new MyOfficeCalculator();
+//	}
+//
+//	private static AdvanceCalculator getMeAdvCalculator() {
+//		return new MyCollegeCalculator();
+//	}
+//
+//	private static BasicCalculator getMeCalculator() {
+//		return new MathCalculator();
+//	}
+//	
 	public static void main(String[] args) {
+		
+//		Day 26 :
+		
+		//Apple a2 = new Apple();
+		//a2.print();
+		
+		
+		// Extends PrintClassName
+		// implilments PrintInterface
+		
+		
+		
+		
+		SchoolGround sg = new SchoolGround();
+		//sg.setName("SchoolGround");
+		//sg.start();
+		
+		School s1 = new School("School Thread1");
+		s1.t.setPriority(10);
+		s1.t.start();
+		
+		School s2 = new School("School Thread2");
+		s2.t.setPriority(6);
+		s2.t.start();
+		
+		School s3 = new School("School Thread3");
+		s3.t.setPriority(1);
+		s3.t.start();
+		
+		
+		
+		
+		
+		
+		System.out.println("s1.t.isAlive() : "+s1.t.isAlive());
+		
+		
+		try {
+			
+			
+			
+			
+			
+			s1.t.join();
+			s2.t.join();
+			s3.t.join();
+			
+			
+			
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		
+		System.out.println("s1.t.isAlive() : "+s1.t.isAlive());
+		System.out.println("Program end");
+		
+		
+		
+		//====================================
 		
 		//System.out.println(x);
 		
@@ -212,86 +279,124 @@ public class BasicMainPage {
 		
 		
 		
-		BasicCalculator cal = getMeCalculator();
+//		BasicCalculator cal = getMeCalculator();
+//		
+//		System.out.println("res = "+cal.divison(12, 0));
+//		
+//		//XyzCalculator cal = new XyzCalculator();
+//		
+//		AdvanceCalculator advCal = getMeAdvCalculator();
+//		System.out.println("res = "+advCal.mod(12, 0));
+//		
+//		AdvanceCalculator ofcCal = getMeOfcCalculator();
+//		System.out.println("res = "+ofcCal.mod(12, 0));
+//		
+//		System.out.println("res = "+ofcCal.add(12, 13));
+//		
+//		System.out.println("res = "+ofcCal.add(12, 13));//ofcCal.calculateTax(1200000, 130000)
+//		
+//		
+//		
+//		TaxService ts = new TaxService(2500000, 100000);
+//		TaxCalculator mhecal = new MheOfficeCalculator();
+//		AdvanceCalculator advMhe = (AdvanceCalculator)mhecal;
+//		System.out.println(ts.calculateTax(mhecal));
+//		System.out.println(advMhe.add(10, 20));
+//		TaxCalculator trical = new TriconOfficeCalculator();
+//		System.out.println(ts.calculateTax(trical));
+//		
+//		
+//		System.out.println(InterfaceVAriables.LATER);
+//		InterfaceVAriables.myCalculatorStartYear();
+//		
+//		//Day21.myCalculatorStartYear(); // interface static method dose not inherit to implemented class 
+//		
+//		int c = Day21.NO;
+//		
+//		Day21.testStatic();
+//		
+//		Day21Ch.testStatic();
 		
-		System.out.println("res = "+cal.divison(12, 0));
 		
-		//XyzCalculator cal = new XyzCalculator();
-		
-		AdvanceCalculator advCal = getMeAdvCalculator();
-		System.out.println("res = "+advCal.mod(12, 0));
-		
-		AdvanceCalculator ofcCal = getMeOfcCalculator();
-		System.out.println("res = "+ofcCal.mod(12, 0));
-		
-		System.out.println("res = "+ofcCal.add(12, 13));
-		
-		System.out.println("res = "+ofcCal.add(12, 13));//ofcCal.calculateTax(1200000, 130000)
-		
-		
-		
-		TaxService ts = new TaxService(2500000, 100000);
-		TaxCalculator mhecal = new MheOfficeCalculator();
-		AdvanceCalculator advMhe = (AdvanceCalculator)mhecal;
-		System.out.println(ts.calculateTax(mhecal));
-		System.out.println(advMhe.add(10, 20));
-		TaxCalculator trical = new TriconOfficeCalculator();
-		System.out.println(ts.calculateTax(trical));
+//		System.out.println("before try block");
+//		int x=0;
+//		int y=5;
+//		int z;
+//		try {
+//			//inside try block
+//			System.out.println("inside try block");
+//			z=y/x;
+//			System.out.println("inside try block after error code");
+//		}catch (Exception e) {
+//			// TODO: handle exception
+//			System.out.println("inside catch block");
+//		}finally {
+//			System.out.println("inside finaly block");
+//		}
+//		
+//		System.out.println("after finaly block");
+//		int[] A = new int[12];
+//		
+//		System.out.println(A.length);
 		
 		
-		System.out.println(InterfaceVAriables.LATER);
-		InterfaceVAriables.myCalculatorStartYear();
+//		LearnExp1 l1 = new LearnExp1();
+//		System.out.println();
+//		System.out.println("Before test me called");
+//		System.out.println();
+//		
+//		try {
+//			l1.testMe(9);
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println("After test me called");
 		
-		//Day21.myCalculatorStartYear(); // interface static method dose not inherit to implemented class 
 		
-		int c = Day21.NO;
+//		
+//		ExceptionWIthFinally e1 = new ExceptionWIthFinally();
+//		
+//		try {
+//			e1.testFinally();
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		try {
+//			e1.checkStudentHelth();
+//		} catch (MyStudentException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		Day21.testStatic();
 		
-		Day21Ch.testStatic();
 		
+//		FewMoreOnExceptions d24 = new FewMoreOnExceptions();
+//		
+//		
+//		try {
+//			System.out.println(d24.testChainException(Integer.parseInt(args[0])));
+//			
+//		} catch (NumberFormatException | IOException e) {
+//			System.out.println("getcause : "+e.getCause());
+//			System.out.println("NumberFormatException : ");
+//			System.out.println();
+//			e.printStackTrace();
+//			
+//		}catch (Exception e) {
+//			System.out.println("getcause : "+e.getCause());
+//			System.out.println("NumberFormatException : ");
+//			System.out.println();
+//			e.printStackTrace();
+//		}
+		
+	//	ThreadingDemo t = new ThreadingDemo();
+	//	t.myThreadRunning();
 		
 	}
-
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	private static AdvanceCalculator getMeOfcCalculator() {
-		return new MyOfficeCalculator();
-	}
-
-
-
-
-
-
-
-
-	private static AdvanceCalculator getMeAdvCalculator() {
-		return new MyCollegeCalculator();
-	}
-
-
-
-
-
-
-
-
-	private static BasicCalculator getMeCalculator() {
-		return new MathCalculator();
-	}
-
 }
