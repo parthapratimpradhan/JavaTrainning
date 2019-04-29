@@ -6,5 +6,7 @@ public class WithoutLambda implements MyNum{
 	public double myMeth(int n) {
 		return n*12.3;
 	}
+	
+	
 
 }
